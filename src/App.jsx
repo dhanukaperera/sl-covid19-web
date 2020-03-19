@@ -3,6 +3,7 @@ import { useStore } from "./Stores/RootStore";
 import { observer } from "mobx-react-lite";
 import DashboardTile from "./components/DashboardTile";
 import styled from "styled-components";
+import HospitalCard from "./components/HospitalCard";
 
 const App = observer(() => {
 	const { stores } = useStore();
@@ -19,11 +20,7 @@ const App = observer(() => {
 		local_deaths,
 		local_new_deaths,
 		local_recovered,
-		global_new_cases,
-		global_total_cases,
-		global_deaths,
-		global_new_deaths,
-		global_recovered
+		hospital_data
 	} = dataStore._dataRegistry;
 
 	return (
@@ -52,6 +49,12 @@ const App = observer(() => {
 					newCases={null}
 				/>
 			</InfoContainer>
+			<HospitalListContainer>
+				{hospital_data &&
+					hospital_data.map((hospital, index) => {
+						return <HospitalCard hospitalData={hospital} key={index} />;
+					})}
+			</HospitalListContainer>
 		</DashboardStyles>
 	);
 });
@@ -68,4 +71,10 @@ const InfoContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+`;
+
+const HospitalListContainer = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 `;
