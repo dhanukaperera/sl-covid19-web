@@ -1,9 +1,9 @@
 
-<svg width="131px" height="117px" viewBox="0 0 131 117" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="133" transform="translate(-2922.000000, -466.000000)" stroke="#0A090B" stroke-width="5">
-            <path d="M3039.86,478.676 L3039.86,478.676 C3026.27,465.093 3004.25,465.093 2990.67,478.676 L2987.62,481.725 L2984.57,478.676 C2970.99,465.093 2948.96,465.093 2935.38,478.676 C2921.8,492.259 2921.8,514.282 2935.38,527.866 L2938.43,530.914 L2987.62,580.104 L3036.81,530.914 L3039.86,527.866 C3053.44,514.282 3053.44,492.259 3039.86,478.676 Z" id="Path"></path>
-            <path d="M3018.51,485.196 C3018.51,485.196 3037.17,491.416 3033.28,510.854 L3018.51,485.196 Z" id="Path"></path>
+<svg width="131px" height="118px" viewBox="0 0 131 118" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="recovered" transform="translate(3.000000, 2.000000)" stroke="#FFFFFF" stroke-width="5">
+            <path d="M114.86,10.676 L114.86,10.676 C101.27,-2.907 79.25,-2.907 65.67,10.676 L62.62,13.725 L59.57,10.676 C45.99,-2.907 23.96,-2.907 10.38,10.676 C-3.2,24.259 -3.2,46.282 10.38,59.866 L13.43,62.914 L62.62,112.104 L111.81,62.914 L114.86,59.866 C128.44,46.282 128.44,24.259 114.86,10.676 Z" id="Path"></path>
+            <path d="M93.51,17.196 C93.51,17.196 112.17,23.416 108.28,42.854 L93.51,17.196 Z" id="Path"></path>
         </g>
     </g>
 </svg>

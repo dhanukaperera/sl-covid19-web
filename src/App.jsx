@@ -26,9 +26,11 @@ const App = observer(() => {
 	return (
 		<DashboardStyles>
 			<h1>Sri Lanka COVID-19 </h1>
+
 			<h2>Local Cases</h2>
 			<InfoContainer>
 				<DashboardTile
+					bg={"warning"}
 					icon={"/icons/hospital.svg"}
 					title="Cases"
 					total={local_total_cases}
@@ -36,6 +38,7 @@ const App = observer(() => {
 				/>
 
 				<DashboardTile
+					bg={"danger"}
 					icon={"/icons/deaths.svg"}
 					title="Deaths"
 					total={local_new_deaths}
@@ -43,18 +46,23 @@ const App = observer(() => {
 				/>
 
 				<DashboardTile
+					bg={"success"}
 					icon={"/icons/recovered.svg"}
 					title="Recovered"
 					total={local_recovered}
 					newCases={null}
 				/>
 			</InfoContainer>
+			<h2>Hospital Status</h2>
 			<HospitalListContainer>
 				{hospital_data &&
 					hospital_data.map((hospital, index) => {
 						return <HospitalCard hospitalData={hospital} key={index} />;
 					})}
 			</HospitalListContainer>
+
+			<p>Last Updated : {update_date_time}</p>
+			<p>Data Source : www.hpb.health.gov.lk </p>
 		</DashboardStyles>
 	);
 });
@@ -65,6 +73,10 @@ const DashboardStyles = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	h1,
+	h2 {
+		font-weight: 300;
+	}
 `;
 
 const InfoContainer = styled.div`
