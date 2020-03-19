@@ -69,11 +69,9 @@ const CardData = styled.div`
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+
 	div {
 		width: 150px;
 		text-align: center;
-	}
-
-	p {
 	}
 `;

@@ -26,12 +26,11 @@ const App = observer(() => {
 	return (
 		<DashboardStyles>
 			<h1>Sri Lanka COVID-19 </h1>
-
 			<h2>Local Cases</h2>
 			<InfoContainer>
 				<DashboardTile
 					bg={"warning"}
-					icon={"/icons/hospital.svg"}
+					icon={"/icons/cases.svg"}
 					title="Cases"
 					total={local_total_cases}
 					newCases={local_new_cases}
@@ -73,6 +72,8 @@ const DashboardStyles = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding-bottom: 2rem;
+
 	h1,
 	h2 {
 		font-weight: 300;
