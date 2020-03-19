@@ -6,7 +6,7 @@ class DataStore {
 	async fetchData() {
 		try {
 			const response = await axios.get(
-				"http://hpb.health.gov.lk/api/get-current-statistical"
+				"https://hpb.health.gov.lk/api/get-current-statistical"
 			);
 			transaction(() => {
 				this._dataRegistry = response.data.data;
