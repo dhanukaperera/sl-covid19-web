@@ -1,26 +1,25 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useEffect } from "react";
+import { useStore } from "./Stores/RootStore";
+import { observer } from "mobx-react-lite";
 
-function App() {
-	return (
-		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
-		</div>
-	);
-}
+const App = observer(() => {
+	const { stores } = useStore();
+	const { dataStore } = stores;
+
+	useEffect(() => {
+		dataStore.initData();
+	}, []);
+
+	const {
+		update_date_time,
+		local_new_cases,
+		local_total_cases,
+		local_deaths,
+		local_new_deaths,
+		local_recovered
+	} = dataStore._dataRegistry;
+
+	return <div></div>;
+});
 
 export default App;
