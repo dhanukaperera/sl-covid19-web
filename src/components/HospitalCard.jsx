@@ -17,14 +17,16 @@ const HospitalCard = ({ hospitalData }) => {
 			<h3> {hospital.name} </h3>
 			<CardData>
 				<div>
-					<p>Tested Local : {cumulative_local} </p>
-					<p>Tested Foreign : {cumulative_foreign} </p>
+					<h4>Tested</h4>
+					<p> Local : {cumulative_local} </p>
+					<p> Foreign : {cumulative_foreign} </p>
 					<p>Total : {cumulative_total} </p>
 				</div>
 
 				<div>
-					<p>Treatment local : {treatment_local} </p>
-					<p>Treatment Foreign : {treatment_foreign} </p>
+					<h4>Treatment</h4>
+					<p> local : {treatment_local} </p>
+					<p> Foreign : {treatment_foreign} </p>
 					<p>Total : {treatment_total} </p>
 				</div>
 			</CardData>
@@ -38,18 +40,26 @@ const HospitalCardStyles = styled.div`
 	display: flex;
 	flex-direction: column;
 	border: 1px solid;
-	width: 340px;
+
 	margin: 1rem;
 	border-radius: 6px;
 	padding: 1rem;
 
 	h3 {
 		padding: 0 0.5rem;
+		text-align: center;
+		max-width: 300px;
 	}
 `;
 
 const CardData = styled.div`
 	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	div {
+		width: 150px;
+		text-align: center;
+	}
 
 	p {
 	}
