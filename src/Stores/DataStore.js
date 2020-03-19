@@ -11,7 +11,6 @@ class DataStore {
 			transaction(() => {
 				this._dataRegistry = response.data.data;
 			});
-			console.log(response);
 		} catch (error) {
 			console.error(error);
 		}

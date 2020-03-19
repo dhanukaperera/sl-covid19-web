@@ -4,6 +4,7 @@ import { observer } from "mobx-react-lite";
 import DashboardTile from "./components/DashboardTile";
 import styled from "styled-components";
 import HospitalCard from "./components/HospitalCard";
+import GitHubButton from "react-github-btn";
 
 const App = observer(() => {
 	const { stores } = useStore();
@@ -25,12 +26,11 @@ const App = observer(() => {
 
 	return (
 		<DashboardStyles>
-			<h1>Sri Lanka COVID-19 </h1>
-			<h2>Local Cases</h2>
+			<h1>Sri Lanka COVID-19 Status</h1>
 			<InfoContainer>
 				<DashboardTile
 					bg={"warning"}
-					icon={"/icons/cases.svg"}
+					icon={"icons/cases.svg"}
 					title="Cases"
 					total={local_total_cases}
 					newCases={local_new_cases}
@@ -38,7 +38,7 @@ const App = observer(() => {
 
 				<DashboardTile
 					bg={"danger"}
-					icon={"/icons/deaths.svg"}
+					icon={"icons/deaths.svg"}
 					title="Deaths"
 					total={local_new_deaths}
 					newCases={local_deaths}
@@ -46,7 +46,7 @@ const App = observer(() => {
 
 				<DashboardTile
 					bg={"success"}
-					icon={"/icons/recovered.svg"}
+					icon={"icons/recovered.svg"}
 					title="Recovered"
 					total={local_recovered}
 					newCases={null}
@@ -62,6 +62,14 @@ const App = observer(() => {
 
 			<p>Last Updated : {update_date_time}</p>
 			<p>Data Source : www.hpb.health.gov.lk </p>
+
+			<GitHubButton
+				href="https://github.com/dhanukaperera/sl-covid19-web"
+				data-size="large"
+				aria-label="Star dhanukaperera/sl-covid19-web on GitHub"
+			>
+				Star
+			</GitHubButton>
 		</DashboardStyles>
 	);
 });
@@ -73,6 +81,11 @@ const DashboardStyles = styled.div`
 	flex-direction: column;
 	align-items: center;
 	padding-bottom: 2rem;
+
+	h1 {
+		padding: 0 1rem;
+		text-align: center;
+	}
 
 	h1,
 	h2 {
