@@ -2,6 +2,8 @@
 
 This is web dashboard that show the current status of COVID-19 in Sri Lanka. Data source : [Heath Promotion Bureau Sri Lanka](https://hpb.health.gov.lk/en/api-documentation)
 
+LIVE at : https://slcovid19.com 
+
 # Information on the Dashboard
 
 - Local confirmed COVID-19 cases reported during last 24 hours
