@@ -52,6 +52,6 @@ MIT
 
 ## Notes
 
-Please not this is an un official project development with personal interest on the subject during free time. Feel free to add your suggestions and contributions. Don't forget to start this project on Github. [![GitHub stars](https://img.shields.io/github/stars/Naereen/StrapDown.js.svg?style=social&label=Star&maxAge=2592000)](https://github.com/dhanukaperera/sl-covid19-web)
+Please not this is an un official project development with personal interest on the subject during free time. Feel free to add your suggestions and contributions. Don't forget to start this project on Github. 
 
 Salute and many thanks to everyone trying to prevent spreading and fighting on COVID 19. Stay safe.
