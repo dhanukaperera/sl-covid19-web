@@ -2,7 +2,7 @@
 
 This is web dashboard that show the current status of COVID-19 in Sri Lanka. Data source : [Heath Promotion Bureau Sri Lanka](https://hpb.health.gov.lk/en/api-documentation)
 
-LIVE at : https://slcovid19.com 
+LIVE at : https://slcovid19.com
 
 # Information on the Dashboard
 
@@ -14,6 +14,7 @@ LIVE at : https://slcovid19.com
 - Total number of foreigners who have been treated /observed for COVID-19 in a given hospital
 - Total number of Sri Lankans who are currently on treatment/observation for COVID-19 in a given hospital
 - Total number of foreigners who are currently on treatment/observation for COVID-19 in a given hospital
+- Total number of locals in Hospitals
 
 # Tech
 
@@ -52,6 +53,6 @@ MIT
 
 ## Notes
 
-Please not this is an un official project development with personal interest on the subject during free time. Feel free to add your suggestions and contributions. Don't forget to start this project on Github. 
+Please not this is an un official project development with personal interest on the subject during free time. Feel free to add your suggestions and contributions. Don't forget to start this project on Github.
 
 Salute and many thanks to everyone trying to prevent spreading and fighting on COVID 19. Stay safe.

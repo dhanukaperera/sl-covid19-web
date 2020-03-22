@@ -1,15 +1,35 @@
 import React from "react";
 import styled from "styled-components";
+import CountUp from "react-countup";
 
 const DashboardTile = ({ title, total, newCases, icon, bg }) => {
 	return (
 		<DashboardTileStyles bg={bg}>
 			<Header>
-				<img src={icon} alt="" />
+				<img src={icon} alt="COIVD-19 status Sri Lanka" />
 				<h1>{title}</h1>
-				{newCases !== 0 && newCases && <New>+{newCases}</New>}
+				{newCases !== 0 && newCases && (
+					<New>
+						+
+						<CountUp start={0} end={newCases ? newCases : 0} delay={0}>
+							{({ countUpRef }) => (
+								<>
+									<span ref={countUpRef} />
+								</>
+							)}
+						</CountUp>
+					</New>
+				)}
 			</Header>
-			<Count>{total}</Count>
+			<Count>
+				<CountUp start={0} end={total ? total : 0} delay={0}>
+					{({ countUpRef }) => (
+						<>
+							<span ref={countUpRef} />
+						</>
+					)}
+				</CountUp>
+			</Count>
 		</DashboardTileStyles>
 	);
 };
@@ -38,6 +58,7 @@ const DashboardTileStyles = styled.div`
 				return {
 					background: "linear-gradient(to right, #11998e, #38ef7d); "
 				};
+			default:
 		}
 	}}
 `;

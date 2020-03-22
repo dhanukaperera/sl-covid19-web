@@ -12,6 +12,7 @@
 		"mobx-react": "^6.1.8",
 		"mobx-react-lite": "^1.5.2",
 		"react": "^16.13.0",
+		"react-countup": "^4.3.3",
 		"react-dom": "^16.13.0",
 		"react-github-btn": "^1.1.1",
 		"react-scripts": "3.4.0",
