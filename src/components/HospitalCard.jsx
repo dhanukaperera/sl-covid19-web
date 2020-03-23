@@ -1,7 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 
 const HospitalCard = ({ hospitalData }) => {
+	const { t } = useTranslation();
 	const {
 		cumulative_local,
 		cumulative_foreign,
@@ -14,20 +16,32 @@ const HospitalCard = ({ hospitalData }) => {
 
 	return (
 		<HospitalCardStyles>
-			<h3> {hospital.name} </h3>
+			<h3>{t(hospital.name)}</h3>
 			<CardData>
 				<div>
-					<h4>Tested</h4>
-					<p> Local : {cumulative_local} </p>
-					<p> Foreign : {cumulative_foreign} </p>
-					<p>Total : {cumulative_total} </p>
+					<h4>{t("TESTED")}</h4>
+					<p>
+						{t("LOCAL")} : {cumulative_local}{" "}
+					</p>
+					<p>
+						{t("FOREIGN")} : {cumulative_foreign}{" "}
+					</p>
+					<p>
+						{t("TOTAL")} : {cumulative_total}{" "}
+					</p>
 				</div>
 
 				<div>
-					<h4>Treatment</h4>
-					<p> local : {treatment_local} </p>
-					<p> Foreign : {treatment_foreign} </p>
-					<p>Total : {treatment_total} </p>
+					<h4> {t("TREATMENT")}</h4>
+					<p>
+						{t("LOCAL")} : {treatment_local}{" "}
+					</p>
+					<p>
+						{t("FOREIGN")} : {treatment_foreign}{" "}
+					</p>
+					<p>
+						{t("TOTAL")} : {treatment_total}{" "}
+					</p>
 				</div>
 			</CardData>
 		</HospitalCardStyles>

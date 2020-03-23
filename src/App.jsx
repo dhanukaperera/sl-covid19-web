@@ -1,13 +1,14 @@
 import { observer } from "mobx-react-lite";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import CountUp from "react-countup";
 import GitHubButton from "react-github-btn";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import DashboardTile from "./components/DashboardTile";
 import HospitalCard from "./components/HospitalCard";
 import Loader from "./components/Loader";
 import { useStore } from "./store/RootStore";
-import { useTranslation } from "react-i18next";
+
 const App = observer(() => {
 	const { t, i18n } = useTranslation();
 	const { stores } = useStore();
@@ -28,6 +29,10 @@ const App = observer(() => {
 		local_total_number_of_individuals_in_hospitals
 	} = dataStore._dataRegistry;
 
+	const changeLanguage = lng => {
+		i18n.changeLanguage(lng);
+	};
+
 	const renderData = () => {
 		return (
 			<>
@@ -35,7 +40,7 @@ const App = observer(() => {
 					<DashboardTile
 						bg={"warning"}
 						icon={"icons/cases.svg"}
-						title="Cases"
+						title={t("CASES")}
 						total={local_total_cases}
 						newCases={local_new_cases}
 					/>
@@ -43,7 +48,7 @@ const App = observer(() => {
 					<DashboardTile
 						bg={"danger"}
 						icon={"icons/deaths.svg"}
-						title="Deaths"
+						title={t("DEATHS")}
 						total={local_new_deaths}
 						newCases={local_deaths}
 					/>
@@ -51,14 +56,14 @@ const App = observer(() => {
 					<DashboardTile
 						bg={"success"}
 						icon={"icons/recovered.svg"}
-						title="Recovered"
+						title={t("RECOVERED")}
 						total={local_recovered}
 						newCases={null}
 					/>
 				</InfoContainer>
-				<h2>Hospital Status</h2>
+				<h2>{t("HOSPITAL_STATUS")}</h2>
 				<TotalHospitalCount>
-					Total Individuals in Hospitals :
+					{t("TOTAL_INDIVIDUALS_IN_HOSPITALS")} :
 					<span>
 						<CountUp
 							start={0}
@@ -83,18 +88,47 @@ const App = observer(() => {
 							return <HospitalCard hospitalData={hospital} key={index} />;
 						})}
 				</HospitalListContainer>
+				<p>
+					{t("LAST_UPDATED")} : {update_date_time}
+				</p>
 			</>
 		);
 	};
 
 	return (
 		<DashboardStyles>
-			<h1>Sri Lanka COVID-19 Status {t("App Title,App Name")} </h1>
+			<LanguageSelection>
+				<button
+					style={{
+						textDecoration: i18n.language === "en" && "underline"
+					}}
+					onClick={() => changeLanguage("en")}
+				>
+					English
+				</button>
+				<button
+					style={{
+						textDecoration: i18n.language === "sn" && "underline"
+					}}
+					onClick={() => changeLanguage("sn")}
+				>
+					සිංහල
+				</button>
+				<button
+					style={{
+						textDecoration: i18n.language === "ta" && "underline"
+					}}
+					onClick={() => changeLanguage("ta")}
+				>
+					தமிழ்
+				</button>
+			</LanguageSelection>
+
+			<h1>{t("APP_TITLE")}</h1>
 
 			{dataStore.isLoading ? <Loader /> : renderData()}
 
-			<p>Last Updated : {update_date_time}</p>
-			<p>Data Source : www.hpb.health.gov.lk </p>
+			<p>{t("DATA_SOURCE")} : www.hpb.health.gov.lk </p>
 
 			<GitHubButton
 				href="https://github.com/dhanukaperera/sl-covid19-web"
@@ -108,6 +142,15 @@ const App = observer(() => {
 });
 
 export default App;
+
+const LanguageSelection = styled.div`
+	display: flex;
+	button {
+		border: none;
+		height: 2rem;
+		width: 4rem;
+	}
+`;
 
 const DashboardStyles = styled.div`
 	display: flex;
