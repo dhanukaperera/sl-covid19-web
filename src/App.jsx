@@ -88,9 +88,16 @@ const App = observer(() => {
 							return <HospitalCard hospitalData={hospital} key={index} />;
 						})}
 				</HospitalListContainer>
-				<p>
-					{t("LAST_UPDATED")} : {update_date_time}
-				</p>
+				<div>
+					<p
+						style={{
+							textAlign: "center",
+							padding: "0 1rem"
+						}}
+					>
+						{t("LAST_UPDATED")} :{update_date_time}
+					</p>
+				</div>
 			</>
 		);
 	};
@@ -146,6 +153,8 @@ export default App;
 const LanguageSelection = styled.div`
 	display: flex;
 	button {
+		background: #fff;
+		color: black;
 		border: none;
 		height: 2rem;
 		width: 4rem;

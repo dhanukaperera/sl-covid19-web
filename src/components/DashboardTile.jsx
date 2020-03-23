@@ -44,6 +44,7 @@ const DashboardTileStyles = styled.div`
 	align-items: center;
 	margin: 1rem;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14);
+
 	${props => {
 		switch (props.bg) {
 			case "warning":
@@ -68,12 +69,14 @@ const Header = styled.div`
 	align-items: center;
 	border-bottom: 1px solid;
 	width: 100%;
+
 	h1 {
 		font-size: 26px;
 		letter-spacing: 0;
-		line-height: 19px;
+		line-height: 32px;
 		font-weight: 320;
 		margin-right: auto;
+		word-break: break-word;
 	}
 
 	img {
