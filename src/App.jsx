@@ -1,5 +1,5 @@
 import { observer } from "mobx-react-lite";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import CountUp from "react-countup";
 import GitHubButton from "react-github-btn";
 import styled from "styled-components";
@@ -7,8 +7,9 @@ import DashboardTile from "./components/DashboardTile";
 import HospitalCard from "./components/HospitalCard";
 import Loader from "./components/Loader";
 import { useStore } from "./store/RootStore";
-
+import { useTranslation } from "react-i18next";
 const App = observer(() => {
+	const { t, i18n } = useTranslation();
 	const { stores } = useStore();
 	const { dataStore } = stores;
 
@@ -88,7 +89,7 @@ const App = observer(() => {
 
 	return (
 		<DashboardStyles>
-			<h1>Sri Lanka COVID-19 Status</h1>
+			<h1>Sri Lanka COVID-19 Status {t("App Title,App Name")} </h1>
 
 			{dataStore.isLoading ? <Loader /> : renderData()}
 
