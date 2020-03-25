@@ -4,6 +4,7 @@ This is web dashboard that show the current status of COVID-19 in Sri Lanka. Dat
 
 LIVE at : https://slcovid19.com
 
+
 # Information on the Dashboard
 
 - Local confirmed COVID-19 cases reported during last 24 hours
@@ -43,8 +44,6 @@ Open http://localhost:3000 to view it in the browser.
 
 ### Todos
 
-- Add language support [Sinhala, Tamil]
-- Add Ainmations
 - Write Tests
 
 ## License
