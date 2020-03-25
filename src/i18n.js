@@ -8,6 +8,7 @@ const resources = {
 		translation: {
 			APP_TITLE: "Sri Lanka COVID-19 Status",
 			CASES: "Cases",
+			"Active Cases": "Active Cases",
 			DEATHS: "Deaths",
 			RECOVERED: "Recovered",
 			HOSPITAL_STATUS: "Hospital Status",
@@ -41,17 +42,19 @@ const resources = {
 			"Base Hospital- Hambantota": "Base Hospital - Hambantota",
 			"Base Hospital - Monaragala": "Base Hospital - Monaragala",
 			"Base Hospital - Welikanda": "Base Hospital - Welikanda",
-			"DGH-Kalutara": "DGH - Kalutara"
+			"DGH-Kalutara": "DGH - Kalutara",
+			"Chest Hospital Welisara": "Chest Hospital Welisara"
 		}
 	},
 
 	sn: {
 		translation: {
-			APP_TITLE: "ශ්‍රී ලංකාවේ COVID-19 තත්ත්වය",
-			CASES: "සියලු රෝගීන්",
+			APP_TITLE: "ශ්‍රී ලංකාවේ COVID-19 තත්වය",
+			CASES: "තහවුරු රෝගීන්",
+			"Active Cases": "ප්‍රතිකාර ලබන",
 			DEATHS: "මරණ",
 			RECOVERED: "සුවය ලැබූවන්",
-			HOSPITAL_STATUS: "රෝහල් තත්ත්වය",
+			HOSPITAL_STATUS: "රෝහල් තත්වය",
 			TOTAL_INDIVIDUALS_IN_HOSPITALS: "ප්‍රතිකාර ලබන සැක සහිත රෝගීන් සංඛ්‍යාව",
 			TESTED: "පරීක්ෂා කර ඇත",
 			TREATMENT: "ප්‍රතිකාර ලබන",
@@ -82,13 +85,15 @@ const resources = {
 			"Base Hospital- Hambantota": "මූලික රෝහල - හම්බන්තොට",
 			"Base Hospital - Monaragala": "මූලික රෝහල - මොනරාගල",
 			"Base Hospital - Welikanda": "මූලික රෝහල - වැලිකන්ද",
-			"DGH-Kalutara": "දිස්ත්‍රික් මහ රෝහල - කළුතර"
+			"DGH-Kalutara": "දිස්ත්‍රික් මහ රෝහල - කළුතර",
+			"Chest Hospital Welisara": "ළය රෝහල - වැලිසර"
 		}
 	},
 	ta: {
 		translation: {
 			APP_TITLE: "இலங்கையில் COVID-19 நிலை",
 			CASES: "நோயாளிகள்",
+			"Active Cases": "சிகிச்சை பெறும்",
 			DEATHS: "மரணங்கள்",
 			RECOVERED: "குணமாகும்",
 			HOSPITAL_STATUS: "மருத்துவமனை நிலை",
@@ -123,7 +128,8 @@ const resources = {
 			"Base Hospital- Hambantota": "ஆதார வைத்தியசாலை - ஹம்பாந்தோட்டா",
 			"Base Hospital - Monaragala": "ஆதார வைத்தியசாலை - மோனராகலா",
 			"Base Hospital - Welikanda": "ஆதார வைத்தியசாலை - வாலிகண்ட",
-			"DGH-Kalutara": "மாவட்ட பொது வைத்தியசாலை - களுத்துறை"
+			"DGH-Kalutara": "மாவட்ட பொது வைத்தியசாலை - களுத்துறை",
+			"Chest Hospital Welisara": "மார்பு வைத்தியசாலை -வெலிசரா"
 		}
 	}
 };

@@ -59,6 +59,10 @@ const DashboardTileStyles = styled.div`
 				return {
 					background: "linear-gradient(to right, #11998e, #38ef7d); "
 				};
+			case "info":
+				return {
+					background: "linear-gradient(to right, #8e2de2, #4a00e0);"
+				};
 			default:
 		}
 	}}

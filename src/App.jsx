@@ -46,6 +46,14 @@ const App = observer(() => {
 					/>
 
 					<DashboardTile
+						bg={"info"}
+						icon={"icons/treatment.svg"}
+						title={t("Active Cases")}
+						total={local_total_cases - local_recovered}
+						newCases={null}
+					/>
+
+					<DashboardTile
 						bg={"danger"}
 						icon={"icons/deaths.svg"}
 						title={t("DEATHS")}
@@ -88,16 +96,10 @@ const App = observer(() => {
 							return <HospitalCard hospitalData={hospital} key={index} />;
 						})}
 				</HospitalListContainer>
-				<div>
-					<p
-						style={{
-							textAlign: "center",
-							padding: "0 1rem"
-						}}
-					>
-						{t("LAST_UPDATED")} :{update_date_time}
-					</p>
-				</div>
+				<LastUpdatedContainer>
+					<span>{t("LAST_UPDATED")}:</span>
+					<span>{update_date_time}</span>
+				</LastUpdatedContainer>
 			</>
 		);
 	};
@@ -213,4 +215,12 @@ const TotalHospitalCount = styled.div`
 		font-size: 30px;
 		padding: 0 0.5rem;
 	}
+`;
+
+const LastUpdatedContainer = styled.div`
+	text-align: center;
+	padding: 0 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 `;
