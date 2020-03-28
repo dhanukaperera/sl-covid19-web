@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 
 const HospitalCard = ({ hospitalData }) => {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
 	const {
 		cumulative_local,
 		cumulative_foreign,
@@ -14,9 +14,21 @@ const HospitalCard = ({ hospitalData }) => {
 		hospital
 	} = hospitalData;
 
+	const translateName = () => {
+		const selectedLan = i18n.language;
+		switch (selectedLan) {
+			case "sn":
+				return hospital.name_si;
+			case "ta":
+				return hospital.name_ta;
+			default:
+				return hospital.name;
+		}
+	};
+
 	return (
 		<HospitalCardStyles>
-			<h3>{t(hospital.name)}</h3>
+			<h3>{translateName()}</h3>
 			<CardData>
 				<div>
 					<h4>{t("TESTED")}</h4>
