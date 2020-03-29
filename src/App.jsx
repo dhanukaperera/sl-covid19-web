@@ -57,8 +57,8 @@ const App = observer(() => {
 						bg={"danger"}
 						icon={"icons/deaths.svg"}
 						title={t("DEATHS")}
-						total={local_new_deaths}
-						newCases={local_deaths}
+						total={local_deaths}
+						newCases={local_new_deaths}
 					/>
 
 					<DashboardTile
