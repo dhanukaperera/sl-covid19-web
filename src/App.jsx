@@ -26,6 +26,7 @@ const App = observer(() => {
 		local_new_deaths,
 		local_recovered,
 		hospital_data,
+		local_active_cases,
 		local_total_number_of_individuals_in_hospitals
 	} = dataStore._dataRegistry;
 
@@ -49,7 +50,7 @@ const App = observer(() => {
 						bg={"info"}
 						icon={"icons/treatment.svg"}
 						title={t("Active Cases")}
-						total={local_total_cases - local_recovered}
+						total={local_active_cases}
 						newCases={null}
 					/>
 
