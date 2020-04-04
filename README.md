@@ -9,6 +9,7 @@ LIVE at : https://slcovid19.com
 
 - Local confirmed COVID-19 cases reported during last 24 hours
 - Total local confirmed COVID-19 cases reported in Sri Lanka
+- Total active cases reported in Sri Lanka
 - Total deaths due to COVID-19 reported in Sri Lanka
 - Total local COVID-19 cases recovered and discharged in Sri Lanka
 - Total number of Sri Lankans who have been treated /observed for COVID-19 in a given hospital
